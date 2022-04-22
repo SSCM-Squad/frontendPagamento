@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { IFuncionarios } from './IFuncionarios';
+import { IFuncionario } from '../models/IFuncionario';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class FuncionariosService {
 
   constructor(private http:HttpClient) { }
 
-  getFuncionarios() :Observable <IFuncionarios[]> {
-    return this.http.get<IFuncionarios[]>(this.url);
+  getFuncionarios() :Observable <IFuncionario[]> {
+    return this.http.get<IFuncionario[]>(this.url);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FuncionariosService } from '../funcionarios.service';
+import { FuncionariosService } from '../../services/funcionarios.service';
 
 @Component({
   selector: 'app-listar',

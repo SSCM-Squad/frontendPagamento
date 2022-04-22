@@ -4,17 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
-import { ListarComponent } from './funcionarios/listar/listar.component';
+import { FuncionariosModule } from './funcionarios/funcionarios.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FuncionariosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

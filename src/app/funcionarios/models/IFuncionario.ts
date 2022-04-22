@@ -1,4 +1,4 @@
-export interface IFuncionarios {
+export interface IFuncionario {
   id: number,
   nome: string,
   salario: number,
