@@ -22,7 +22,7 @@ export class FuncionariosService {
     return this.http.get<IFuncionario>(`${this.API}/funcionario/${idFuncionario}`);
   }
 
-  cadastrarFuncionario(funcionario: FuncionarioCadastro): Observable<IFuncionario>{
+  cadastrarFuncionario(funcionario: IFuncionario): Observable<IFuncionario>{
     return this.http.post<IFuncionario>(`${this.API}/cadastrar-funcionario`, funcionario);
   }
 

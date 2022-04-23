@@ -11,8 +11,8 @@ import { IFuncionario } from '../../models/IFuncionario';
 })
 export class CadastroFuncionarioComponent implements OnInit {
 
-  funcionario : FuncionarioCadastro = new FuncionarioCadastro()
-  funcionarioRetorno : IFuncionario = {} as IFuncionario;
+  // funcionario : FuncionarioCadastro = new FuncionarioCadastro()
+  funcionario : IFuncionario = {} as IFuncionario;
 
   constructor(private funcionarioService : FuncionariosService) {
 
@@ -23,8 +23,8 @@ export class CadastroFuncionarioComponent implements OnInit {
 
   cadastrar(){
     this.funcionarioService.cadastrarFuncionario(this.funcionario).subscribe((resp: IFuncionario)=>{
-      this.funcionarioRetorno = resp;
-      console.log(this.funcionarioRetorno)
+      this.funcionario = resp;
+      console.log(this.funcionario)
     })
   }
 
