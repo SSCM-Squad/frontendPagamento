@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-5 border p-3">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nome completo</label>
+          <input [(ngModel)]="funcionario.nome" name="nome" class="form-control" placeholder="nome completo do funcionário">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Quantidade de dependentes</label>
+          <select [(ngModel)]="funcionario.dependentes" name="dependentes"class="form-control" id="exampleFormControlSelect1">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Salário</label>
+          <input [(ngModel)]="funcionario.salario" name="salario" class="form-control" placeholder="salário base do funcionário">
+        </div>
+      </form>
+      <button (click)="cadastrar()" type="button" class="btn btn-primary">cadastrar</button>
+    </div>
+  </div>
+</div>

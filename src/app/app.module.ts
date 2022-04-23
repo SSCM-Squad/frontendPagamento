@@ -5,16 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FuncionariosModule } from './funcionarios/funcionarios.module';
+import { MenuComponent } from './menu/menu.component';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { FormsModule } from '@angular/forms';
+import { PerfilFuncionarioComponent } from './perfil-funcionario/perfil-funcionario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    CadastroFuncionarioComponent,
+    PerfilFuncionarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FuncionariosModule
+    FuncionariosModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

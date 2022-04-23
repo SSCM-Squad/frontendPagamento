@@ -1,0 +1,46 @@
+<div class="container mt-5 ">
+  <div class="row justify-content-center">
+
+    <div class="col-5 border p-3">
+      <p class="text-center">{{funcionario.nome}} </p>
+      <p class="text-center">{{funcionario.funcao}}</p>
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item"><i class="bi bi-currency-dollar"></i> Salário base:
+          {{funcionario.salario}}
+        </li>
+
+        <li class="list-group-item"><i class="bi bi-people"></i> Dependentes:
+          {{funcionario.dependentes}}
+        </li>
+
+        <li class="list-group-item"> <i class="bi bi-clock"></i> Jornada de trabalho:
+          {{funcionario.jornadaDeTrabalho}} horas
+        </li>
+
+        <li class="list-group-item"><i class="bi bi-clipboard-pulse"></i> Valor plano de saúde:
+          {{funcionario.valorPlanoDeSaude}} R$
+        </li>
+
+        <li class="list-group-item"><i class="bi bi-radioactive"></i> Adicional periculosidade:
+          {{funcionario.adicionalPericulosidade}}%
+        </li>
+
+        <li class="list-group-item"> <i class="bi bi-stopwatch"></i> Horas extras:
+          {{funcionario.horasExtras}}
+        </li>
+
+        <li class="list-group-item"><i class="bi bi-credit-card"></i> Ajuda de custo:
+          {{funcionario.ajudaDeCusto}} R$
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row justify-content-center mt-2">
+    <div class="col-5">
+      <button type="button" class="btn btn-outline-info btn-lg btn-block">Atualizar informações</button>
+    </div>
+  </div>
+
+</div>
