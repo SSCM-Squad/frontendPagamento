@@ -25,6 +25,10 @@ export class FuncionariosService {
   cadastrarFuncionario(funcionario: FuncionarioCadastro): Observable<IFuncionario>{
     return this.http.post<IFuncionario>(`${this.API}/cadastrar-funcionario`, funcionario);
   }
+
+  atualizarFuncionario(idFuncionario: number, funcionario: IFuncionario): Observable<IFuncionario>{
+    return this.http.put<IFuncionario>(`${this.API}/atualizar-funcionario/${idFuncionario}`, funcionario);
+  }
 }
 
 

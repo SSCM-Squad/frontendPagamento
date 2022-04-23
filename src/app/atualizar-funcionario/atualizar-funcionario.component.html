@@ -1,0 +1,94 @@
+<div class="container mt-5 mb-3">
+  <div class="row justify-content-center">
+    <div class="col-5 border border-dark p-2">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-file-person-fill"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.nome" type="text" class="form-control" placeholder="Nome">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-briefcase-fill"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.funcao" type="text" class="form-control" placeholder="Cargo">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-currency-dollar"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.salario" type="text" class="form-control" placeholder="Salário base">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-people"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.dependentes" type="text" class="form-control" placeholder="dependentes" >
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-clock"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.jornadaDeTrabalho" type="text" class="form-control" placeholder="jornada de trabalho" >
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-clipboard-pulse"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.valorPlanoDeSaude" type="text" class="form-control" placeholder="valor plano de saúde" >
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-radioactive"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.adicionalPericulosidade" type="text" class="form-control" placeholder="adicional periculosidade" >
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-credit-card"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.horasExtras" type="text" class="form-control" placeholder="horas extras" >
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="bi bi-file-person"></i>
+          </span>
+        </div>
+        <input [(ngModel)]="funcionario.cpf" type="text" class="form-control" placeholder="cpf" >
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row mt-3 justify-content-center">
+    <div class="col-5">
+      <button (click)="atualizarInformacoes()" type="button" class="btn btn-outline-success btn-lg btn-block">Atualizar informações <i class="bi bi-clipboard-check"></i></button>
+    </div>
+  </div>
+</div>

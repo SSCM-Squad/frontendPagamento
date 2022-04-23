@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FuncionariosService } from '../funcionarios/services/funcionarios.service';
 
 @Component({
-  selector: 'app-perfil-funcionario',
-  templateUrl: './perfil-funcionario.component.html',
-  styleUrls: ['./perfil-funcionario.component.css']
+  selector: 'app-atualizar-funcionario',
+  templateUrl: './atualizar-funcionario.component.html',
+  styleUrls: ['./atualizar-funcionario.component.css']
 })
-export class PerfilFuncionarioComponent implements OnInit {
+export class AtualizarFuncionarioComponent implements OnInit {
 
   funcionario : IFuncionario = {} as IFuncionario
 
@@ -22,14 +22,17 @@ export class PerfilFuncionarioComponent implements OnInit {
     this.funcionarioService.buscarFuncionario(idRotaAtiva).subscribe((resp: IFuncionario) =>{
       this.funcionario = resp;
     })
-
   }
 
   ngOnInit(): void {
   }
 
-  irParaEdicaoFuncionario(){
-    this.router.navigate(['/editar-funcionario', this.funcionario.id])
+  atualizarInformacoes(){
+    this.funcionarioService.atualizarFuncionario(this.funcionario.id, this.funcionario).subscribe((resp: IFuncionario) =>{
+      this.funcionario = resp
+    })
+
+    this.router.navigate(['/perfil-funcionario', this.funcionario.id])
   }
 
 }

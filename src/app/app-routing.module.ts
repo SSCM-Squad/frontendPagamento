@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AtualizarFuncionarioComponent } from './atualizar-funcionario/atualizar-funcionario.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { ListarComponent } from './funcionarios/components/listar/listar.component';
 import { MenuComponent } from './menu/menu.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:"menu", component: MenuComponent},
   {path:"cadastrar-funcionario", component: CadastroFuncionarioComponent},
   {path:"listar-funcionarios", component: ListarComponent},
-  {path:"perfil-funcionario/:id", component: PerfilFuncionarioComponent}
+  {path:"perfil-funcionario/:id", component: PerfilFuncionarioComponent},
+  {path:"editar-funcionario/:id", component: AtualizarFuncionarioComponent}
 ];
 
 @NgModule({

@@ -1,12 +1,12 @@
-<div class="container mt-5 ">
+<div class="container mt-5 mb-3 ">
   <div class="row justify-content-center">
 
-    <div class="col-5 border p-3">
+    <div class="col-5 border border-dark p-2">
       <p class="text-center">{{funcionario.nome}} </p>
       <p class="text-center">{{funcionario.funcao}}</p>
       <ul class="list-group list-group-flush">
 
-        <li class="list-group-item"><i class="bi bi-currency-dollar"></i> Salário base:
+        <li class="list-group-item "><i class="bi bi-currency-dollar"></i> Salário base:
           {{funcionario.salario}}
         </li>
 
@@ -33,13 +33,17 @@
         <li class="list-group-item"><i class="bi bi-credit-card"></i> Ajuda de custo:
           {{funcionario.ajudaDeCusto}} R$
         </li>
+
+        <li class="list-group-item"><i class="bi bi-file-person"></i> CPF:
+          {{funcionario.cpf}}
+        </li>
       </ul>
     </div>
   </div>
 
   <div class="row justify-content-center mt-2">
     <div class="col-5">
-      <button type="button" class="btn btn-outline-info btn-lg btn-block">Atualizar informações</button>
+      <button (click)="irParaEdicaoFuncionario()" type="button" class="btn btn-outline-info btn-lg btn-block">Editar informações <i class="bi bi-clipboard-data"></i></button>
     </div>
   </div>
 
