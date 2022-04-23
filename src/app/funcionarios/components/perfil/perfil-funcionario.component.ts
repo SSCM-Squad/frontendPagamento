@@ -1,7 +1,7 @@
-import { IFuncionario } from './../funcionarios/models/IFuncionario';
+import { IFuncionario } from '../../models/IFuncionario';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FuncionariosService } from '../funcionarios/services/funcionarios.service';
+import { FuncionariosService } from '../../services/funcionarios.service';
 
 @Component({
   selector: 'app-perfil-funcionario',
@@ -19,7 +19,7 @@ export class PerfilFuncionarioComponent implements OnInit {
   ) {
 
     let idRotaAtiva =  this.route.snapshot.params['id'];
-    
+
     this.funcionarioService.buscarFuncionario(idRotaAtiva).subscribe((resp: IFuncionario) =>{
       this.funcionario = resp;
     })

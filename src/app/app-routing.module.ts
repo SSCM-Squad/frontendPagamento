@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AtualizarFuncionarioComponent } from './atualizar-funcionario/atualizar-funcionario.component';
-import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { AtualizarFuncionarioComponent } from './funcionarios/components/atualizar/atualizar-funcionario.component';
+import { CadastroFuncionarioComponent } from './funcionarios/components/cadastrar/cadastro-funcionario.component';
 import { ListarComponent } from './funcionarios/components/listar/listar.component';
 import { MenuComponent } from './menu/menu.component';
-import { PerfilFuncionarioComponent } from './perfil-funcionario/perfil-funcionario.component';
+import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/perfil-funcionario.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'menu'},

@@ -6,18 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FuncionariosModule } from './funcionarios/funcionarios.module';
 import { MenuComponent } from './menu/menu.component';
-import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { CadastroFuncionarioComponent } from './funcionarios/components/cadastrar/cadastro-funcionario.component';
 import { FormsModule } from '@angular/forms';
-import { PerfilFuncionarioComponent } from './perfil-funcionario/perfil-funcionario.component';
-import { AtualizarFuncionarioComponent } from './atualizar-funcionario/atualizar-funcionario.component';
+import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/perfil-funcionario.component';
+import { AtualizarFuncionarioComponent } from './funcionarios/components/atualizar/atualizar-funcionario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    CadastroFuncionarioComponent,
-    PerfilFuncionarioComponent,
-    AtualizarFuncionarioComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,

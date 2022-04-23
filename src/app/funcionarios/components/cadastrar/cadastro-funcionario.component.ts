@@ -1,7 +1,7 @@
-import { FuncionariosService } from './../funcionarios/services/funcionarios.service';
-import { FuncionarioCadastro } from './../funcionarios/models/funcionario-cadastro';
+import { FuncionariosService } from '../../services/funcionarios.service';
+import { FuncionarioCadastro } from '../../models/funcionario-cadastro';
 import { Component, OnInit } from '@angular/core';
-import { IFuncionario } from '../funcionarios/models/IFuncionario';
+import { IFuncionario } from '../../models/IFuncionario';
 
 
 @Component({
