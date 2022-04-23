@@ -14,11 +14,11 @@ export class FuncionariosService {
 
   constructor(private http:HttpClient) { }
 
-  getFuncionarios() :Observable <IFuncionario[]> {
+  getFuncionarios() : Observable<IFuncionario[]> {
     return this.http.get<IFuncionario[]>(this.API + "/funcionarios");
   }
 
-  buscarFuncionario(idFuncionario: number) :Observable <IFuncionario> {
+  buscarFuncionario(idFuncionario: number) : Observable<IFuncionario> {
     return this.http.get<IFuncionario>(`${this.API}/funcionario/${idFuncionario}`);
   }
 

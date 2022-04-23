@@ -19,6 +19,7 @@ export class PerfilFuncionarioComponent implements OnInit {
   ) {
 
     let idRotaAtiva =  this.route.snapshot.params['id'];
+    
     this.funcionarioService.buscarFuncionario(idRotaAtiva).subscribe((resp: IFuncionario) =>{
       this.funcionario = resp;
     })

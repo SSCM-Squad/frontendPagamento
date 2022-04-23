@@ -10,13 +10,17 @@ import { FuncionariosService } from '../../services/funcionarios.service';
 })
 export class ListarComponent implements OnInit {
 
-  funcionarios : IFuncionario[] = {} as IFuncionario[];
+  funcionarios :  IFuncionario[] = {} as IFuncionario[];
 
-  constructor(private funcionariosService:FuncionariosService) {
+  constructor(
+      private funcionariosService:FuncionariosService
+  ){
+
     this.funcionariosService.getFuncionarios().subscribe((resp: IFuncionario[]) => {
       this.funcionarios = resp;
     })
-   }
+
+  }
 
   ngOnInit(): void {
 
