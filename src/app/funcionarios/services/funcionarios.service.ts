@@ -21,7 +21,11 @@ export class FuncionariosService {
     return this.http.get<IFuncionario>(`${this.API}/funcionario/${idFuncionario}`);
   }
 
-  cadastrarFuncionario(funcionario: IFuncionario): Observable<IFuncionario>{
+  buscarFuncionarioPorCpf(cpfFuncionario: string) : Observable<IFuncionario> {
+    return this.http.get<IFuncionario>(`${this.API}/funcionario/cpf=${cpfFuncionario}`);
+  }
+
+  cadastrarFuncionario(funcionario: FuncionarioCadastro): Observable<IFuncionario>{
     return this.http.post<IFuncionario>(`${this.API}/cadastrar-funcionario`, funcionario);
   }
 
