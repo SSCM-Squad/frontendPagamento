@@ -5,6 +5,8 @@ import { CadastroFuncionarioComponent } from './funcionarios/components/cadastra
 import { ListarComponent } from './funcionarios/components/listar/listar.component';
 import { MenuComponent } from './menu/menu.component';
 import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/perfil-funcionario.component';
+import { ConsultarMenuComponent } from './holerites/components/consultar-menu/consultar-menu.component';
+import { HoleriteComponent } from './holerites/components/holerite/holerite.component';
 import { PainelEmpresaComponent } from './funcionarios/components/painel-empresa/painel-empresa.component';
 
 const routes: Routes = [
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path:"cadastrar-funcionario", component: CadastroFuncionarioComponent},
   {path:"listar-funcionarios", component: ListarComponent},
   {path:"perfil-funcionario/:id", component: PerfilFuncionarioComponent},
-  {path:"editar-funcionario/:id", component: AtualizarFuncionarioComponent}
+  {path:"editar-funcionario/:id", component: AtualizarFuncionarioComponent},
+  {path:"consultar-holerites", component: ConsultarMenuComponent},
+  {path:"holerite/:id", component: HoleriteComponent}
 ];
 
 @NgModule({

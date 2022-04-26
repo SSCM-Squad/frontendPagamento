@@ -1,0 +1,68 @@
+<main>
+  <div id="holerite-container">
+    <div class="cabecalho">
+      <p>{{ holerite.cabecalho.nomeEmpresa }}</p>
+      <p>CNPJ: {{ holerite.cabecalho.cnpjEmpresa }}</p>
+      <div id="cabecalho-right">
+        <p>Recibo de pagamento de salário</p>
+        <p>{{ holerite.cabecalho.data }}</p>
+        <p>COD: {{ holerite.cabecalho.cod }}</p>
+      </div>
+      <div id="subcabecalho">
+        <p>Funcionário: {{ holerite.cabecalho.nomeFuncionario }}</p>
+        <p>Função: {{ holerite.cabecalho.cargoFuncionario }}</p>
+      </div>
+    </div>
+    <table class="table table-striped mt-1 table-sm">
+      <thead>
+        <tr>
+          <th scope="col" class="detalhe-blue">COD</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Ref</th>
+          <th scope="col">Vencimentos</th>
+          <th scope="col">Descontos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let detalhe of holerite.detalhes">
+          <th scope="row" class="detalhe-blue">{{ detalhe.id }}</th>
+          <td class="detalhe-white">{{ detalhe.descricao }}</td>
+          <td class="detalhe-white">{{ detalhe.referencia }}</td>
+          <td class="detalhe-white">{{ detalhe.vencimento | currency:'BRL' }} </td>
+          <td class="detalhe-white">{{ detalhe.desconto | currency:'BRL' }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="rodape1">
+      <div id="blank"></div>
+      <div id="total">
+        <div id="total-top">
+          <div id="total-vencimentos">
+            <p style="line-height: 1rem;">Total de vencimentos:</p>
+            <p>{{ holerite.rodape.totalVencimentos | currency:'BRL' }}</p>
+          </div>
+          <div id="total-descontos">
+            <p style="line-height: 1rem;">Total de descontos:</p>
+            <p>{{ holerite.rodape.totalDescontos | currency:'BRL' }}</p>
+          </div>
+        </div>
+        <div id="total-bottom">
+          <p>Valor líquido: {{ holerite.rodape.valorLiquido | currency:'BRL' }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm">
+        <p>Salário base: {{ holerite.rodape.salarioBase | currency:'BRL' }}</p>
+        <p>FGTS: {{ holerite.rodape.baseFgts | currency:'BRL' }}</p>
+      </div>
+      <div class="col-sm">
+        <p>Base INSS: {{ holerite.rodape.baseInss | currency:'BRL' }}</p>
+        <p>Dependentes: {{ holerite.rodape.dependentes }}</p>
+      </div>
+      <div class="col-sm">
+        <p>Base IRPF: {{ holerite.rodape.baseIrpf | currency:'BRL' }}</p>
+      </div>
+    </div>
+  </div>
+</main>

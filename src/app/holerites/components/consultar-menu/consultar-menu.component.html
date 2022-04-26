@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-5 border p-3">
+      <form>
+        <label for="consulta-id">Consultar holerite por ID</label>
+        <div class="form-row">
+          <div class="col-7 form-group">
+            <input name="consulta-id" [(ngModel)]="holeriteId" type="text" class="form-control" placeholder="ID do holerite">
+          </div>
+          <div class="col">
+            <a class="btn btn-primary" [routerLink]="['/holerite', holeriteId]">Consultar</a>
+          </div>
+        </div>
+        <label for="consulta-cpf">Consultar holerite por CPF do funcionário</label>
+        <div class="form-row">
+          <div class="col-7 form-group">
+            <input name="consulta-cpf" type="text" class="form-control" placeholder="CPF do funcionário">
+          </div>
+          <div class="col">
+            <button class="btn btn-primary">Consultar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
