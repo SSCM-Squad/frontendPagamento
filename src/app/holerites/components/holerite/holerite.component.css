@@ -1,0 +1,90 @@
+p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#holerite-container {
+  background-color: #5972D9;
+  color: white;
+  font-size: 14px;
+  width: 50%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#cabecalho-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+#cabecalho-right p {
+  align-self: flex-end;
+}
+
+#subcabecalho {
+  width: 100%;
+  border-top: 2px solid white;
+}
+
+table {
+  background-color: white;
+  color: black;
+  margin-bottom: 3px;
+}
+
+#rodape1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#blank {
+  width: 60%;
+}
+
+#total {
+  text-align: center;
+  background-color: white;
+  width: 40%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+#total-top {
+  display: flex;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#total-descontos {
+  border-left: 1px solid black;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#total-bottom {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}

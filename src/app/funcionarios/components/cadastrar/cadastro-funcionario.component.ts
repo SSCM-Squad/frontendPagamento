@@ -1,5 +1,4 @@
 import { FuncionariosService } from '../../services/funcionarios.service';
-import { FuncionarioCadastro } from '../../models/funcionario-cadastro';
 import { Component, OnInit } from '@angular/core';
 import { IFuncionario } from '../../models/IFuncionario';
 

@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { HoleritesModule } from './holerites/holerites.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuComponent } from './menu/menu.component';
     AppRoutingModule,
     HttpClientModule,
     FuncionariosModule,
-    FormsModule
+    FormsModule,
+    HoleritesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
