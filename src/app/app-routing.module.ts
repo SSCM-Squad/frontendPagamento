@@ -5,10 +5,12 @@ import { CadastroFuncionarioComponent } from './funcionarios/components/cadastra
 import { ListarComponent } from './funcionarios/components/listar/listar.component';
 import { MenuComponent } from './menu/menu.component';
 import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/perfil-funcionario.component';
+import { PainelEmpresaComponent } from './funcionarios/components/painel-empresa/painel-empresa.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'menu'},
   {path:"menu", component: MenuComponent},
+  {path:"painel-empresa", component: PainelEmpresaComponent},
   {path:"cadastrar-funcionario", component: CadastroFuncionarioComponent},
   {path:"listar-funcionarios", component: ListarComponent},
   {path:"perfil-funcionario/:id", component: PerfilFuncionarioComponent},

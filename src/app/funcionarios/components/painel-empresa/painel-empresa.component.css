@@ -1,0 +1,17 @@
+.bg-container{
+  background-color: #D5F2ED;
+}
+
+.border-color{
+  border-width: large;
+  border-style: solid;
+  border-color: #011C26;;
+}
+
+.bg-header{
+  background-color: #011C26;
+}
+
+.bg-body{
+  background-color: #BDF2D9  ;
+}
