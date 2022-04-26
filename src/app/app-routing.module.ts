@@ -5,9 +5,9 @@ import { CadastroFuncionarioComponent } from './funcionarios/components/cadastra
 import { ListarComponent } from './funcionarios/components/listar/listar.component';
 import { MenuComponent } from './menu/menu.component';
 import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/perfil-funcionario.component';
-import { ConsultarMenuComponent } from './holerites/components/consultar-menu/consultar-menu.component';
-import { HoleriteComponent } from './holerites/components/holerite/holerite.component';
 import { PainelEmpresaComponent } from './funcionarios/components/painel-empresa/painel-empresa.component';
+import { HoleriteComponent } from './holerites/components/holerite/holerite.component';
+import { ConsultarMenuComponent } from './holerites/components/consultar-menu/consultar-menu.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'menu'},
