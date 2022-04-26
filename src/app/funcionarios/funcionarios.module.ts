@@ -9,6 +9,7 @@ import { AtualizarFuncionarioComponent } from './components/atualizar/atualizar-
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { PainelEmpresaComponent } from './components/painel-empresa/painel-empresa.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     ListarComponent,
     CadastroFuncionarioComponent,
     PerfilFuncionarioComponent,
-    AtualizarFuncionarioComponent
+    AtualizarFuncionarioComponent,
+    PainelEmpresaComponent
   ],
   imports: [
     CommonModule,
