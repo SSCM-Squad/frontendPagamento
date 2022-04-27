@@ -1,20 +1,3 @@
-.bg-container{
-  background-color: #D5F2ED;
-}
-
-.border-color{
-  border-width: large;
-  border-style: solid;
-  border-color: #011C26;;
-}
-
-.bg-header{
-  background-color: #011C26;
-}
-
-.bg-body{
-  background-color: #BDF2D9  ;
-}
 
 #holerite-container {
   background-color: #5972D9;
@@ -90,4 +73,3 @@ table {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
-

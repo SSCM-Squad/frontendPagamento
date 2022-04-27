@@ -4,7 +4,7 @@ export interface IFuncionario {
   salario: number,
   funcao: string,
   cpf: string,
-  adicionalPericulosidade: number,
+  adicionalPericulosidade: boolean,
   jornadaDeTrabalho: number,
   horasExtras: number,
   dependentes: number,

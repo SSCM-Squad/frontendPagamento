@@ -1,30 +1,3 @@
-<div class="container mt-5 p-3">
-
-  <div class="row justify-content-center" >
-    <div class="col-xl-3 mb-3">
-      <h1>Ações rápidas</h1>
-    </div>
-  </div>
-
-  <div class="row justify-content-center ">
-    <div class="col-xl-3">
-      <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header bg-header text-white"> <i class="bi bi-person-plus-fill"></i>      ver seus holerites
-        </div>
-        <div class="card-body bg-body">
-          <div class="form-group">
-            <label for="exampleInputEmail1">CPF:</label>
-            <input [(ngModel)]="funcionarioCpf" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          </div>
-          <a [routerLink]="['/listar-holerites', funcionarioCpf]" class="btn btn-dark">Ver</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-xl-8">
@@ -44,7 +17,7 @@
             <i class="bi bi-upc"></i>
           </span>
         </div>
-        <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="Informe seu CPF">
+        <input [(ngModel)]="identificador" type="text" class="form-control" placeholder="Identificador usuário">
       </div>
 
     </div>
@@ -61,7 +34,7 @@
     </div>
 
     <div class="col-xl-4">
-      <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Consultar holerite</button>
+      <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Gerar holerite</button>
     </div>
 
   </div>

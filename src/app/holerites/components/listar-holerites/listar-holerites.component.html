@@ -1,0 +1,19 @@
+<div class="contaier mt-5">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let holerite of holerites">
+            <td>{{holerite.dataDoHolerite}}</td>
+            <td><a  [routerLink]="['/holerite', holerite.id]"  class="btn btn-outline-secondary">ver</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
