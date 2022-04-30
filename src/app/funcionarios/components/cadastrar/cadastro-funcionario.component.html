@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Adicional de periculosidade</label>
-          <input [(ngModel)]="funcionario.adicionalPericulosidade" name="adicionalPericulosidade" class="form-control" placeholder="quantidade da porcentagem, ex: 10">
+          <input [(ngModel)]="funcionario.adicionalPericulosidade" name="adicionalPericulosidade" class="form-control" placeholder="true ou false">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Jornada de trabalho</label>
@@ -49,6 +49,10 @@
         <div class="form-group">
           <label for="exampleFormControlInput1">Valor do plano de saúde</label>
           <input [(ngModel)]="funcionario.valorPlanoDeSaude" name="valorPlanoDeSaude" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Tipo de funcionário</label>
+          <input [(ngModel)]="funcionario.tipoFuncionario" placeholder="Ex: Colaborador" name="tipoFuncionario" class="form-control" (ngModelChange)="funcionario.tipoFuncionario = $event.toUpperCase()">
         </div>
       </form>
       <button (click)="cadastrar()" type="button" class="btn btn-primary">cadastrar</button>
