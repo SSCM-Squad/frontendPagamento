@@ -9,5 +9,6 @@ export interface IFuncionario {
   horasExtras: number,
   dependentes: number,
   ajudaDeCusto: number,
-  valorPlanoDeSaude: number
+  valorPlanoDeSaude: number,
+  tipoFuncionario: string
 }

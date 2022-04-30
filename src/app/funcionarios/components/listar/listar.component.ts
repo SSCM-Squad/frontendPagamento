@@ -1,6 +1,7 @@
 import { IFuncionario } from './../../models/IFuncionario';
 import { Component, OnInit } from '@angular/core';
 import { FuncionariosService } from '../../services/funcionarios.service';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class ListarComponent implements OnInit {
   funcionarios :  IFuncionario[] = {} as IFuncionario[];
 
   constructor(
-      private funcionariosService:FuncionariosService
+      private funcionariosService:FuncionariosService, private location: Location
   ){
 
     this.funcionariosService.getFuncionarios().subscribe((resp: IFuncionario[]) => {
@@ -24,6 +25,10 @@ export class ListarComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  back(): void {
+    this.location.back()
   }
 
 }
