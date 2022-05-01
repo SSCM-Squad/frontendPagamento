@@ -1,61 +1,68 @@
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-5 border p-3">
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Nome completo</label>
-          <input [(ngModel)]="funcionario.nome" name="nome" class="form-control" placeholder="nome completo do funcionário">
+      <form #f="ngForm" class="row justify-content-center border p-3">
+        <div class="col-3">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Nome completo</label>
+            <input [(ngModel)]="funcionario.nome" name="nome" class="form-control" placeholder="nome completo do funcionário" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">CPF</label>
+            <input [(ngModel)]="funcionario.cpf" name="cpf" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Função</label>
+            <input [(ngModel)]="funcionario.funcao" name="funcao" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Salário</label>
+            <input [(ngModel)]="funcionario.salario" name="salario" class="form-control" placeholder="salário base do funcionário" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Quantidade de dependentes</label>
+            <select [(ngModel)]="funcionario.dependentes" name="dependentes"class="form-control" id="exampleFormControlSelect1" required>
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Adicional de periculosidade</label>
+            <select [(ngModel)]="funcionario.adicionalPericulosidade" name="adicionalPericulosidade" class="form-control" id="exampleFormControlSelect1" required>
+              <option value="true">Sim</option>
+              <option value="false">Não</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">CPF</label>
-          <input [(ngModel)]="funcionario.cpf" name="cpf" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Função</label>
-          <input [(ngModel)]="funcionario.funcao" name="funcao" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Salário</label>
-          <input [(ngModel)]="funcionario.salario" name="salario" class="form-control" placeholder="salário base do funcionário">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Quantidade de dependentes</label>
-          <select [(ngModel)]="funcionario.dependentes" name="dependentes"class="form-control" id="exampleFormControlSelect1">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Adicional de periculosidade</label>
-          <input [(ngModel)]="funcionario.adicionalPericulosidade" name="adicionalPericulosidade" class="form-control" placeholder="true ou false">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Jornada de trabalho</label>
-          <input [(ngModel)]="funcionario.jornadaDeTrabalho" name="jornadaDeTrabalho" class="form-control" placeholder="quantidade de horas no mês">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Horas extras</label>
-          <input [(ngModel)]="funcionario.horasExtras" name="horasExtras" class="form-control"
-          placeholder="quantidade de horas extras">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Ajuda de custo</label>
-          <input [(ngModel)]="funcionario.ajudaDeCusto" name="ajudaDeCusto" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Valor do plano de saúde</label>
-          <input [(ngModel)]="funcionario.valorPlanoDeSaude" name="valorPlanoDeSaude" class="form-control">
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Tipo de funcionário</label>
-          <input [(ngModel)]="funcionario.tipoFuncionario" placeholder="Ex: Colaborador" name="tipoFuncionario" class="form-control" (ngModelChange)="funcionario.tipoFuncionario = $event.toUpperCase()">
+        <div class="col-3">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Jornada de trabalho</label>
+            <input [(ngModel)]="funcionario.jornadaDeTrabalho" name="jornadaDeTrabalho" class="form-control" placeholder="quantidade de horas no mês" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Horas extras</label>
+            <input [(ngModel)]="funcionario.horasExtras" name="horasExtras" class="form-control"
+            placeholder="quantidade de horas extras" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Ajuda de custo</label>
+            <input [(ngModel)]="funcionario.ajudaDeCusto" name="ajudaDeCusto" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Valor do plano de saúde</label>
+            <input [(ngModel)]="funcionario.valorPlanoDeSaude" name="valorPlanoDeSaude" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Tipo de funcionário</label>
+            <select [(ngModel)]="funcionario.tipoFuncionario" name="tipoFuncionario" class="form-control" id="exampleFormControlSelect1" required>
+              <option value="COLABORADOR">Colaborador</option>
+              <option value="TRABALHADOR_DOMESTICO">Trabalhador doméstico</option>
+              <option value="JOVEM_APRENDIZ">Jovem aprendiz</option>
+            </select>
+          </div>
+          <button (click)="cadastrar()" [disabled]="f.invalid" type="button" class="btn btn-success cad-btn">Cadastrar</button>
         </div>
       </form>
-      <button (click)="cadastrar()" type="button" class="btn btn-primary">cadastrar</button>
-    </div>
-  </div>
 </div>
