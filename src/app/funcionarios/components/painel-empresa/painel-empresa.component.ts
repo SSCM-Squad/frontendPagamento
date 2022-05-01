@@ -1,3 +1,4 @@
+import { FuncionariosService } from './../../services/funcionarios.service';
 import { IFuncionario } from './../../models/IFuncionario';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,9 +14,18 @@ export class PainelEmpresaComponent implements OnInit {
 
   funcionarioEncontrado : IFuncionario = {} as IFuncionario
 
-  constructor() { }
+  constructor(
+    private funcionarioService : FuncionariosService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  pesquisarUsuario(){
+    this.funcionarioService.buscarFuncionarioPorCpf(this.funcionarioCpf).subscribe((resp: IFuncionario) =>{
+      console.log("AQUI O CPF" + this.funcionarioCpf)
+      this.funcionarioEncontrado = resp;
+    })
   }
 
 }

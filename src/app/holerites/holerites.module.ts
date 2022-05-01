@@ -5,13 +5,15 @@ import { HoleriteComponent } from './components/holerite/holerite.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
+import { ListarHoleritesComponent } from './components/listar-holerites/listar-holerites.component';
 
 
 
 @NgModule({
   declarations: [
     ConsultarMenuComponent,
-    HoleriteComponent
+    HoleriteComponent,
+    ListarHoleritesComponent
   ],
   imports: [
     CommonModule,

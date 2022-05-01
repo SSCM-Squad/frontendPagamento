@@ -11,6 +11,7 @@ import { CadastroFuncionarioComponent } from './components/cadastrar/cadastro-fu
 import { PerfilFuncionarioComponent } from './components/perfil/perfil-funcionario.component';
 import { AtualizarFuncionarioComponent } from './components/atualizar/atualizar-funcionario.component';
 import { PainelEmpresaComponent } from './components/painel-empresa/painel-empresa.component';
+import { GerarHoleriteComponent } from './components/gerar-holerite/gerar-holerite.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PainelEmpresaComponent } from './components/painel-empresa/painel-empre
     CadastroFuncionarioComponent,
     PerfilFuncionarioComponent,
     AtualizarFuncionarioComponent,
-    PainelEmpresaComponent
+    PainelEmpresaComponent,
+    GerarHoleriteComponent
   ],
   imports: [
     CommonModule,

@@ -30,7 +30,7 @@
       <div class="card border-dark mb-3" style="max-width: 18rem;">
         <div class="card-header bg-header text-white"> <i class="bi bi-layout-text-window"></i>Gerar holerite</div>
         <div class="card-body bg-body">
-          <a [routerLink]="['/listar-funcionarios']" class="btn btn-dark">Gerar holerite</a>
+          <a [routerLink]="['/gerar-holerite']" class="btn btn-dark">Gerar holerite</a>
         </div>
       </div>
     </div>
@@ -50,9 +50,11 @@
     <div class="col-xl-6">
 
       <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="CPF do Funcionário">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary"
+        <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="CPF do Funcionário">
+        <div class="input-group-append" >
+          <button
+            (click)="pesquisarUsuario()"
+            class="btn btn-outline-secondary"
             type="button"
             data-toggle="collapse"
             data-target="#resultadoPesquisa" >
@@ -67,7 +69,19 @@
 
       <div class="collapse" id="resultadoPesquisa">
         <div class="card card-body">
-          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+          <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-file-person"></i>
+                {{funcionarioEncontrado.nome}}
+              </li>
+              <li class="list-group-item"> <i class="bi bi-briefcase-fill"></i>
+                {{funcionarioEncontrado.funcao}}
+              </li>
+              <li class="list-group-item"><i class="bi bi-upc"></i>
+                {{funcionarioEncontrado.id}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

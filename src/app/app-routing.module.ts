@@ -1,3 +1,4 @@
+import { ListarHoleritesComponent } from './holerites/components/listar-holerites/listar-holerites.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AtualizarFuncionarioComponent } from './funcionarios/components/atualizar/atualizar-funcionario.component';
@@ -8,6 +9,7 @@ import { PerfilFuncionarioComponent } from './funcionarios/components/perfil/per
 import { PainelEmpresaComponent } from './funcionarios/components/painel-empresa/painel-empresa.component';
 import { HoleriteComponent } from './holerites/components/holerite/holerite.component';
 import { ConsultarMenuComponent } from './holerites/components/consultar-menu/consultar-menu.component';
+import { GerarHoleriteComponent } from './funcionarios/components/gerar-holerite/gerar-holerite.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'menu'},
@@ -17,7 +19,10 @@ const routes: Routes = [
   {path:"listar-funcionarios", component: ListarComponent},
   {path:"perfil-funcionario/:id", component: PerfilFuncionarioComponent},
   {path:"editar-funcionario/:id", component: AtualizarFuncionarioComponent},
-  {path:"consultar-holerites", component: ConsultarMenuComponent},
+  {path:"gerar-holerite", component: GerarHoleriteComponent},
+
+  {path:"painel-funcionario", component: ConsultarMenuComponent},
+  {path:"listar-holerites/:cpf", component: ListarHoleritesComponent},
   {path:"holerite/:id", component: HoleriteComponent}
 ];
 

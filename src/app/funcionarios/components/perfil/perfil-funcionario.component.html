@@ -7,7 +7,7 @@
       <ul class="list-group list-group-flush">
 
         <li class="list-group-item "><i class="bi bi-currency-dollar"></i> Salário base:
-          {{funcionario.salario}}
+          {{funcionario.salario | currency:'BRL'}}
         </li>
 
         <li class="list-group-item"><i class="bi bi-people"></i> Dependentes:
@@ -19,11 +19,12 @@
         </li>
 
         <li class="list-group-item"><i class="bi bi-clipboard-pulse"></i> Valor plano de saúde:
-          {{funcionario.valorPlanoDeSaude}} R$
+          {{funcionario.valorPlanoDeSaude | currency:'BRL'}}
         </li>
 
         <li class="list-group-item"><i class="bi bi-radioactive"></i> Adicional periculosidade:
-          {{funcionario.adicionalPericulosidade}}%
+          <ng-container *ngIf="funcionario.adicionalPericulosidade == true; else adicionalFalse">Sim</ng-container>
+          <ng-template #adicionalFalse>Não</ng-template>
         </li>
 
         <li class="list-group-item"> <i class="bi bi-stopwatch"></i> Horas extras:
@@ -31,7 +32,7 @@
         </li>
 
         <li class="list-group-item"><i class="bi bi-credit-card"></i> Ajuda de custo:
-          {{funcionario.ajudaDeCusto}} R$
+          {{funcionario.ajudaDeCusto | currency:'BRL'}}
         </li>
 
         <li class="list-group-item"><i class="bi bi-file-person"></i> CPF:
@@ -43,7 +44,7 @@
 
   <div class="row justify-content-center mt-2">
     <div class="col-5">
-      <button (click)="irParaEdicaoFuncionario()" type="button" class="btn btn-outline-info btn-lg btn-block">Editar informações <i class="bi bi-clipboard-data"></i></button>
+      <button (click)="irParaEdicaoFuncionario()" type="button" class="btn btn-info btn-lg btn-block">Editar informações <i class="bi bi-clipboard-data"></i></button>
     </div>
   </div>
 
