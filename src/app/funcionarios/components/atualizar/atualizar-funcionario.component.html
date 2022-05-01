@@ -1,94 +1,113 @@
-<div class="container mt-5 mb-3">
-  <div class="row justify-content-center">
-    <div class="col-5 border border-dark p-2">
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-file-person-fill"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.nome" type="text" class="form-control" placeholder="Nome">
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-briefcase-fill"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.funcao" type="text" class="form-control" placeholder="Cargo">
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-currency-dollar"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.salario" type="text" class="form-control" placeholder="Salário base">
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-people"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.dependentes" type="text" class="form-control" placeholder="dependentes" >
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-clock"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.jornadaDeTrabalho" type="text" class="form-control" placeholder="jornada de trabalho" >
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-clipboard-pulse"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.valorPlanoDeSaude" type="text" class="form-control" placeholder="valor plano de saúde" >
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-radioactive"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.adicionalPericulosidade" type="text" class="form-control" placeholder="adicional periculosidade" >
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-credit-card"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.horasExtras" type="text" class="form-control" placeholder="horas extras" >
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-file-person"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionario.cpf" type="text" class="form-control" placeholder="cpf" >
-      </div>
-
+<div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
+  <div class="card pb-3">
+    <div class="card-header">
+      <strong>Editar informações</strong>
     </div>
-  </div>
-
-  <div class="row mt-3 justify-content-center">
-    <div class="col-5">
-      <button (click)="atualizarInformacoes()" type="button" class="btn btn-success btn-lg btn-block">Atualizar informações <i class="bi bi-clipboard-check"></i></button>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-file-person-fill mr-2"></i>
+                Nome
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.nome" type="text" class="form-control" placeholder="Nome">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-briefcase-fill mr-2"></i>
+                Função
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.funcao" type="text" class="form-control" placeholder="Cargo">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-currency-dollar mr-2"></i>
+                Salário
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.salario" type="text" class="form-control" placeholder="Salário base">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-people mr-2"></i>
+                Dependentes
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.dependentes" type="text" class="form-control" placeholder="dependentes" >
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-clock mr-2"></i>
+                Jornada de trabalho
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.jornadaDeTrabalho" type="text" class="form-control" placeholder="jornada de trabalho" >
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-clipboard-pulse mr-2"></i>
+                Valor do plano de saúde
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.valorPlanoDeSaude" type="text" class="form-control" placeholder="valor plano de saúde">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-radioactive mr-2"></i>
+                Adicional de periculosidade
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.adicionalPericulosidade" type="text" class="form-control" placeholder="adicional periculosidade" >
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-credit-card mr-2"></i>
+                Horas extras
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.horasExtras" type="text" class="form-control" placeholder="horas extras" >
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-file-person mr-2"></i>
+                CPF
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.cpf" type="text" class="form-control" placeholder="cpf" >
+          </div>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-center align-items-center">
+        <button (click)="atualizarInformacoes()" class="btn btn-primary mt-3"><i class="bi bi-clipboard-data"></i> Atualizar informações</button>
+      </div>
     </div>
   </div>
 </div>
