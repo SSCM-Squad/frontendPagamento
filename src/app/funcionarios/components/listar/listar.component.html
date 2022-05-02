@@ -1,4 +1,11 @@
-<div class="container mt-5">
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/painel-empresa']">Painel da Empresa</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Listar Funcionários</li>
+    </ol>
+  </nav>
   <div class="row justify-content-center">
     <div class="col-5">
       <table class="table table-light rounded table-striped">
@@ -17,7 +24,6 @@
           </tr>
         </tbody>
       </table>
-      <button (click)="back()" class="btn">Voltar</button>
     </div>
   </div>
 </div>

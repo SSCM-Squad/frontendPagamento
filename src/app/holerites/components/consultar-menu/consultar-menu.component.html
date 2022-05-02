@@ -1,6 +1,12 @@
-<div class="container mt-5 p-3">
+<div class="container mt-3 p-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Painel do Colaborador</li>
+    </ol>
+  </nav>
 
-  <div class="row justify-content-center" >
+  <div class="row justify-content-center">
     <div class="col-xl-3 mb-3">
       <h1>Ações rápidas</h1>
     </div>
@@ -9,68 +15,50 @@
   <div class="row justify-content-center ">
     <div class="col-xl-3">
       <div class="card border-dark mb-3" style="max-width: 18rem;">
-        <div class="card-header bg-header text-white"> <i class="bi bi-person-plus-fill"></i>      ver seus holerites
+        <div class="card-header bg-header text-white"> <i class="bi bi-person-plus-fill mr-1"></i>
+          Consulte seus holerites
         </div>
         <div class="card-body bg-body">
           <div class="form-group">
             <label for="exampleInputEmail1">CPF:</label>
-            <input [(ngModel)]="funcionarioCpf" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input [(ngModel)]="funcionarioCpf" type="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
           </div>
-          <a [routerLink]="['/listar-holerites', funcionarioCpf]" class="btn btn-dark">Ver</a>
+          <a [routerLink]="['/listar-holerites', funcionarioCpf]" class="btn btn-dark">Consultar</a>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-xl-8">
-      <h5>Forneça o Identificador do funcionário e a data referente a geração do holerite </h5>
-    </div>
-  </div>
-</div>
-
-<div class="container mt-5 ">
-  <div class="row justify-content-center mt-3">
-
-    <div class="col-xl-4">
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-upc"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="Informe seu CPF">
+<div class="d-flex flex-column align-items-center justify-content-center">
+  <h4>Forneça o CPF do funcionário e a data do holerite</h4>
+  <div class="row mt-3">
+    <div class="input-group mb-3 col">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="bi bi-upc"></i>
+        </span>
       </div>
-
+      <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="Informe seu CPF">
     </div>
-
-    <div class="col-xl-4">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">
-            <i class="bi bi-calendar-event"></i>
-          </span>
-        </div>
-        <input [(ngModel)]="data" type="text" class="form-control" placeholder="Data referente">
+    <div class="input-group mb-3 col">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+          <i class="bi bi-calendar-event"></i>
+        </span>
       </div>
+      <input [(ngModel)]="data" type="text" class="form-control" placeholder="Data referente">
     </div>
-
-    <div class="col-xl-4">
+    <div class="col">
       <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Consultar holerite</button>
     </div>
-
   </div>
 </div>
 
-<div  *ngIf="existeHolerite()" class="container mt-3 mb-4">
-  <div class="row justify-content-center">
-
-    <div class="col-xl-8">
+<main #holerite>
+  <div *ngIf="existeHolerite()" class="container mt-2 mb-4">
+    <div class="row justify-content-center">
       <div id="holerite-container">
         <div class="cabecalho">
           <p>{{ holeriteGerado.cabecalho.nomeEmpresa }}</p>
@@ -139,5 +127,4 @@
       </div>
     </div>
   </div>
-
-</div>
+</main>

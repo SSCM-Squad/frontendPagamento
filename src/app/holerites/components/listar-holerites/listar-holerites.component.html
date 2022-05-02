@@ -1,16 +1,24 @@
-<div class="contaier mt-5">
+<div class="container mt-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/painel-funcionario']">Painel do Colaborador</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Consulta de Holerites</li>
+    </ol>
+  </nav>
   <div class="row justify-content-center">
-    <div class="col-5">
-      <table class="table table-dark">
-        <thead>
+    <div class="col-4">
+      <table class="table table-light table-striped">
+        <thead class="thead-light">
           <tr>
-            <th scope="col">Data</th>
+            <th scope="col">Data do holerite</th>
+            <th scope="col">Detalhes</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let holerite of holerites">
-            <td>{{holerite.dataDoHolerite}}</td>
-            <td><a  [routerLink]="['/holerite', holerite.id]"  class="btn btn-outline-secondary">ver</a></td>
+            <th scope="row">{{holerite.dataDoHolerite}}</th>
+            <td><a  [routerLink]="['/holerite', holerite.id]"  class="btn btn-secondary">Ver holerite</a></td>
           </tr>
         </tbody>
       </table>

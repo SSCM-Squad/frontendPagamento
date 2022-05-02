@@ -1,17 +1,16 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-xl-8">
-      <h5>Forneça o Identificador do funcionário e a data referente a geração do holerite </h5>
-    </div>
-  </div>
-</div>
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/painel-empresa']">Painel da Empresa</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Gerar Holerite</li>
+    </ol>
+  </nav>
 
-<div class="container mt-5 ">
-  <div class="row justify-content-center mt-3">
-
-    <div class="col-xl-4">
-
-      <div class="input-group mb-3">
+  <div class="row d-flex flex-column align-items-center justify-content-center">
+    <h4>Forneça o Identificador do funcionário e a data referente a geração do holerite</h4>
+    <div class="row mt-3">
+      <div class="input-group mb-3 col">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">
             <i class="bi bi-upc"></i>
@@ -19,11 +18,7 @@
         </div>
         <input [(ngModel)]="identificador" type="text" class="form-control" placeholder="Identificador usuário">
       </div>
-
-    </div>
-
-    <div class="col-xl-4">
-      <div class="input-group mb-3">
+      <div class="input-group mb-3 col">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">
             <i class="bi bi-calendar-event"></i>
@@ -31,19 +26,16 @@
         </div>
         <input [(ngModel)]="data" type="text" class="form-control" placeholder="Data referente">
       </div>
+      <div class="col">
+        <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Gerar holerite</button>
+      </div>
     </div>
-
-    <div class="col-xl-4">
-      <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Gerar holerite</button>
-    </div>
-
   </div>
 </div>
 
-<div  *ngIf="existeHolerite()" class="container mt-3 mb-4">
-  <div class="row justify-content-center">
-
-    <div class="col-xl-8">
+<main>
+  <div *ngIf="existeHolerite()" class="container mt-2 mb-4">
+    <div class="row justify-content-center">
       <div id="holerite-container">
         <div class="cabecalho">
           <p>{{ holeriteGerado.cabecalho.nomeEmpresa }}</p>
@@ -112,5 +104,4 @@
       </div>
     </div>
   </div>
-
-</div>
+</main>
