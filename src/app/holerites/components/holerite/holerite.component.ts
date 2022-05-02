@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HoleritesService } from '../../services/holerites.service';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-holerite',
@@ -16,7 +16,8 @@ export class HoleriteComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private holeritesService: HoleritesService,
-    private router : Router
+    private router : Router,
+    private location: Location
   ) {
     this.holeritesService.getHoleriteById(this.idRotaAtiva).subscribe((resp: any) =>{
       this.holerite = resp;
@@ -25,6 +26,10 @@ export class HoleriteComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  back(): void {
+    this.location.back()
   }
 
 }

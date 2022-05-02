@@ -1,4 +1,13 @@
 <main>
+  <nav aria-label="breadcrumb" class="mt-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/painel-funcionario']">Painel do Colaborador</a></li>
+      <li class="breadcrumb-item"><a class="back" (click)="back()">Consulta de Holerites</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Holerite</li>
+    </ol>
+  </nav>
+
   <button class="btn btn-light mb-3" onclick="window.print()">Imprimir</button>
   <div id="holerite-container">
     <div class="cabecalho">
