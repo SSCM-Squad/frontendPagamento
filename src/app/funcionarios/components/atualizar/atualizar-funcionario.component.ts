@@ -2,6 +2,7 @@ import { IFuncionario } from '../../models/IFuncionario';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FuncionariosService } from '../../services/funcionarios.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-atualizar-funcionario',
@@ -15,7 +16,8 @@ export class AtualizarFuncionarioComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private funcionarioService: FuncionariosService,
-    private router : Router
+    private router : Router,
+    private location: Location
   ) {
 
     let idRotaAtiva =  this.route.snapshot.params['id'];
@@ -33,6 +35,10 @@ export class AtualizarFuncionarioComponent implements OnInit {
     })
 
     this.router.navigate(['/perfil-funcionario', this.funcionario.id])
+  }
+
+  back(): void {
+    this.location.back()
   }
 
 }
