@@ -1,3 +1,15 @@
+<div class="container mt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/painel-empresa']">Painel da Empresa</a></li>
+      <li class="breadcrumb-item"><a [routerLink]="['/listar-funcionarios']">Lista de Funcionários</a></li>
+      <li class="breadcrumb-item"><a class="back" (click)="back()">Perfil</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Editar Informações</li>
+    </ol>
+  </nav>
+</div>
+
 <div class="container d-flex justify-content-center align-items-center mt-5 mb-5">
   <div class="card pb-3">
     <div class="card-header">

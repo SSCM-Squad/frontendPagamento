@@ -1,3 +1,12 @@
 .card-body {
   padding: 0 !important;
 }
+
+.back {
+  color: #007bff !important;
+  cursor: pointer;
+}
+
+.back:hover {
+  text-decoration: underline !important;
+}
