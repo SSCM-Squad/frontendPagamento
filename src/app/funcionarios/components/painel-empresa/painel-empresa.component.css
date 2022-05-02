@@ -13,5 +13,13 @@
 }
 
 .bg-body{
-  background-color: #BDF2D9  ;
+  background-color: #F0F7F4;
+}
+
+.card-func {
+  padding: 0 !important;
+}
+
+.card {
+  background-color: inherit !important;
 }

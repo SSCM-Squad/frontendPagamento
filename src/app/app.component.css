@@ -1,3 +1,17 @@
 .navbar {
-  background-color: #D5F2ED !important;
+  background-color: #82c0cc !important;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.8) !important;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  transition: all .4s ease;
+  font-weight: 600;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.5) !important;
 }

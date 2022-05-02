@@ -1,9 +1,7 @@
-<div class="container mt-5 p-3">
+<div class="container mt-3 p-3">
 
   <div class="row justify-content-center" >
-    <div class="col-xl-3 mb-3">
-      <h1>Ações rápidas</h1>
-    </div>
+    <h1 class="roboto-h1">Ações rápidas</h1>
   </div>
 
   <div class="row justify-content-center ">
@@ -12,7 +10,7 @@
         <div class="card-header bg-header text-white"> <i class="bi bi-person-plus-fill mr-1"></i> Adicionar colaborador
         </div>
         <div class="card-body bg-body rounded">
-          <a [routerLink]="['/cadastrar-funcionario']" class="btn btn-dark">Cadastrar</a>
+          <a [routerLink]="['/cadastrar-funcionario']" class="btn btn-info">Cadastrar</a>
         </div>
       </div>
     </div>
@@ -21,7 +19,7 @@
       <div class="card border-dark mb-3" style="max-width: 18rem;">
         <div class="card-header bg-header text-white"> <i class="bi bi-people-fill mr-1"></i> Listar funcionários</div>
         <div class="card-body bg-body rounded">
-          <a [routerLink]="['/listar-funcionarios']" class="btn btn-dark">Ver funcionários</a>
+          <a [routerLink]="['/listar-funcionarios']" class="btn btn-info">Ver funcionários</a>
         </div>
       </div>
     </div>
@@ -30,7 +28,7 @@
       <div class="card border-dark mb-3" style="max-width: 18rem;">
         <div class="card-header bg-header text-white"> <i class="bi bi-layout-text-window mr-2"></i>Gerar holerite</div>
         <div class="card-body bg-body rounded">
-          <a [routerLink]="['/gerar-holerite']" class="btn btn-dark">Gerar holerite</a>
+          <a [routerLink]="['/gerar-holerite']" class="btn btn-info">Gerar holerite</a>
         </div>
       </div>
     </div>
@@ -38,54 +36,74 @@
   </div>
 </div>
 
-<div class="container mt-5 p-3">
+<div class="container mt-3 mb-5">
 
   <div class="row justify-content-center" >
-    <div class="col-xl-3 mb-3">
-      <h1>Pesquisar</h1>
-    </div>
+    <h1 class="roboto-h1">Pesquisar Funcionário</h1>
   </div>
 
-  <div class="row justify-content-center">
-    <div class="col-xl-6">
-
-      <div class="input-group mb-3">
-        <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="CPF do Funcionário">
-        <div class="input-group-append" >
-          <button
-            (click)="pesquisarUsuario()"
-            class="btn btn-outline-secondary"
-            type="button"
-            data-toggle="collapse"
-            data-target="#resultadoPesquisa" >
-            Pesquisar
-          </button>
-        </div>
+  <div class="d-flex flex-column justify-content-center align-items-center mt-2">
+    <div class="input-group mb-3 col-6">
+      <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="CPF do Funcionário">
+      <div class="input-group-append" >
+        <button
+          (click)="pesquisarUsuario()"
+          class="btn btn-dark"
+          type="button"
+          data-toggle="collapse"
+          data-target="#resultadoPesquisa" >
+          Pesquisar
+        </button>
       </div>
-
     </div>
 
-    <div class="col-xl-6">
-
-      <div class="collapse" id="resultadoPesquisa">
-        <div class="card card-body">
-          <div class="card" style="width: 18rem;">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><i class="bi bi-file-person"></i>
-                {{funcionarioEncontrado.nome}}
-              </li>
-              <li class="list-group-item"> <i class="bi bi-briefcase-fill"></i>
-                {{funcionarioEncontrado.funcao}}
-              </li>
-              <li class="list-group-item"><i class="bi bi-upc"></i>
-                {{funcionarioEncontrado.id}}
-              </li>
-            </ul>
-          </div>
+    <div class="collapse" id="resultadoPesquisa">
+      <div class="card">
+        <div class="card-body card-func">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="bi bi-file-person-fill mr-2"></i>
+                    Nome
+                  </span>
+                </div>
+                <input [(ngModel)]="funcionarioEncontrado.nome" readonly type="text" class="form-control" placeholder="Nome">
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="bi bi-briefcase-fill mr-2"></i>
+                    Função
+                  </span>
+                </div>
+                <input [(ngModel)]="funcionarioEncontrado.funcao" readonly type="text" class="form-control" placeholder="Cargo">
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">
+                    <i class="bi bi-upc mr-2"></i>
+                    ID
+                  </span>
+                </div>
+                <input [(ngModel)]="funcionarioEncontrado.id" readonly type="text" class="form-control" placeholder="Cargo">
+              </div>
+            </li>
+            <div class="card-footer">
+              <div class="d-flex align-items-center justify-content-center">
+                <a [routerLink]="['../perfil-funcionario', funcionarioEncontrado.id]">
+                  <button class="btn btn-primary">Mais Detalhes</button>
+                </a>
+              </div>
+            </div>
+          </ul>
         </div>
       </div>
-
     </div>
-
   </div>
 </div>

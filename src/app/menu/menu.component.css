@@ -3,11 +3,15 @@
 }
 
 .bg-body{
-  background-color: #D5F2ED;
+  background-color: #F0F7F4;
 }
 
 .bg-footer{
   background-color: #011C26;
+}
+
+.card {
+  background-color: inherit !important;
 }
 
 
