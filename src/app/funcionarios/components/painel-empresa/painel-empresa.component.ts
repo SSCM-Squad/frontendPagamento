@@ -23,9 +23,10 @@ export class PainelEmpresaComponent implements OnInit {
 
   pesquisarUsuario(){
     this.funcionarioService.buscarFuncionarioPorCpf(this.funcionarioCpf).subscribe((resp: IFuncionario) =>{
-      console.log("AQUI O CPF" + this.funcionarioCpf)
       this.funcionarioEncontrado = resp;
-    })
+    },
+      httpError => alert(httpError.error.erro)
+    )
   }
 
   existeFuncionario() : boolean{
@@ -33,5 +34,6 @@ export class PainelEmpresaComponent implements OnInit {
        this.funcionarioEncontrado === null ||
        Object.keys(this.funcionarioEncontrado).length === 0)
   }
+
 
 }

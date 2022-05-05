@@ -27,7 +27,8 @@ export class GerarHoleriteComponent implements OnInit {
   gerarHolerite(){
     this.holeriteService.gerarHolerite(this.identificador, this.data).subscribe((resp: IHolerite)=>{
         this.holeriteGerado = resp
-    })
+    }, httpError => alert(httpError.error.erro)
+    )
   }
 
   existeHolerite() : boolean{
