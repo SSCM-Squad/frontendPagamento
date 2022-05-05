@@ -28,4 +28,10 @@ export class PainelEmpresaComponent implements OnInit {
     })
   }
 
+  existeFuncionario() : boolean{
+    return !(this.funcionarioEncontrado === undefined ||
+       this.funcionarioEncontrado === null ||
+       Object.keys(this.funcionarioEncontrado).length === 0)
+  }
+
 }

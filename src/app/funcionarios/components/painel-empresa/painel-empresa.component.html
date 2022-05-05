@@ -91,10 +91,10 @@
                     ID
                   </span>
                 </div>
-                <input [(ngModel)]="funcionarioEncontrado.id" readonly type="text" class="form-control" placeholder="Cargo">
+                <input [(ngModel)]="funcionarioEncontrado.id" readonly type="text" class="form-control" placeholder="identificador">
               </div>
             </li>
-            <div class="card-footer">
+            <div  *ngIf="existeFuncionario()" class="card-footer">
               <div class="d-flex align-items-center justify-content-center">
                 <a [routerLink]="['../perfil-funcionario', funcionarioEncontrado.id]">
                   <button class="btn btn-primary">Mais Detalhes</button>
@@ -105,5 +105,6 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
