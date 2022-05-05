@@ -1,3 +1,4 @@
+import { FuncionarioCadastro } from './../models/funcionario-cadastro';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -25,7 +26,7 @@ export class FuncionariosService {
     return this.http.get<IFuncionario>(`${this.API}/funcionario/cpf=${cpfFuncionario}`);
   }
 
-  cadastrarFuncionario(funcionario: IFuncionario): Observable<IFuncionario>{
+  cadastrarFuncionario(funcionario: FuncionarioCadastro): Observable<IFuncionario>{
     return this.http.post<IFuncionario>(`${this.API}/cadastrar-funcionario`, funcionario);
   }
 

@@ -1,7 +1,15 @@
-export class FuncionarioCadastro {
+export interface FuncionarioCadastro {
 
-  nome!: string
-  salario! : string
-  dependentes!: number
+  adicionalPericulosidade: boolean
+  ajudaDeCusto: number
+  cpf: string
+  dependentes: number
+  funcao: string
+  horasExtras: number
+  jornadaDeTrabalho: number
+  nome: string
+  salario: number
+  tipoFuncionario: string
+  valorPlanoDeSaude: number
 
 }
