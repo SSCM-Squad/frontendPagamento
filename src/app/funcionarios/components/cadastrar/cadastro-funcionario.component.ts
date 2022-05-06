@@ -59,11 +59,17 @@ export class CadastroFuncionarioComponent implements OnInit {
 
   onError(httpHerror: any){
 
-    this.showErrorModal();
+    if(httpHerror.error.erro === "Esse funcionário já esta cadastro no sistema"){
+      alert(httpHerror.error.erro)
+      
+    }else{
 
-    Object.entries(httpHerror.error.erros).map(([key, value]) => {
-      this.arrayErros.push([key, value]);
-    });
+      this.showErrorModal();
+
+      Object.entries(httpHerror.error.erros).map(([key, value]) => {
+        this.arrayErros.push([key, value]);
+      });
+    }
 
   }
 }
