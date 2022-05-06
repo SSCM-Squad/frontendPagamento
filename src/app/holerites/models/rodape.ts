@@ -8,7 +8,7 @@ export interface Rodape {
 
 	baseInss : string;
 
-	baseFgts : string;
+	valorFgts : string;
 
 	baseIrpf : string;
 

@@ -1,6 +1,6 @@
 import { FuncionarioCadastro } from './../../models/funcionario-cadastro';
 import { FuncionariosService } from '../../services/funcionarios.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { IFuncionario } from '../../models/IFuncionario';
 import { NgForm } from '@angular/forms';
 
@@ -18,25 +18,35 @@ export class CadastroFuncionarioComponent implements OnInit {
   funcionario : FuncionarioCadastro = {} as FuncionarioCadastro;
   funcionarioCompleto: IFuncionario = {} as IFuncionario;
 
-  arrayDeErros : [string, unknown][] = [];
+  arrayErros: any = [];
 
   tipoModal : String = "";
 
+  // @ViewChild('modalSucesso') modalSucesso!: ElementRef;
+
 
   constructor(private funcionarioService : FuncionariosService) {
-
   }
 
 
   ngOnInit(): void {
   }
 
+  // abrirModalSucesso() {
+  //   this.modalSucesso.nativeElement.className = 'modal fade show';
+  // }
+
   cadastrar(){
     console.log(this.funcionario)
+
+    // this.tipoModal = "";
+
     this.funcionarioService.cadastrarFuncionario(this.funcionario).subscribe((resp: IFuncionario)=>{
       this.funcionarioCompleto = resp;
-      this.onSuccess()
+      this.onSuccess();
     }, httpHerror => this.onError(httpHerror))
+
+    this.arrayErros = [];
   }
 
   onSuccess(){
@@ -48,7 +58,7 @@ export class CadastroFuncionarioComponent implements OnInit {
     this.tipoModal = "#erroCadastro"
 
     Object.entries(httpHerror.error.erros).map(([key, value]) => {
-      
+      this.arrayErros.push([key, value]);
     });
 
   }

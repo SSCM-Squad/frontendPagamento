@@ -7,7 +7,7 @@
     </ol>
   </nav>
 
-  <form #f="ngForm" class="row justify-content-center border p-3">
+  <form #f="ngForm" class="row justify-content-center border p-3 mb-4">
     <div class="col-3">
       <div class="form-group">
         <label for="exampleFormControlInput1">Nome completo</label>
@@ -86,7 +86,7 @@
   </form>
 </div>
 
-<div class="modal fade" id="sucesso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" #modalSucesso id="sucesso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -102,7 +102,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="erroCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" #modalErro id="erroCadastro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -110,6 +110,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
+      </div>
+      <div class="modal-body">
+        <p *ngFor="let array of arrayErros">
+          Campo: {{ array[0] }} - Erro: {{ array[1] }}
+        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
