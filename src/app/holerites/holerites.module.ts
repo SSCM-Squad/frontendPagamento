@@ -5,6 +5,8 @@ import { HoleriteComponent } from './components/holerite/holerite.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
+import { NgxMaskModule } from 'ngx-mask'
+
 import { ListarHoleritesComponent } from './components/listar-holerites/listar-holerites.component';
 
 
@@ -19,7 +21,8 @@ import { ListarHoleritesComponent } from './components/listar-holerites/listar-h
     CommonModule,
     RouterModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forChild()
   ],
   exports: [
     ConsultarMenuComponent,

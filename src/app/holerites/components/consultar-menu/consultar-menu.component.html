@@ -19,7 +19,7 @@
         <div class="card-body bg-body">
           <div class="form-group">
             <label for="exampleInputEmail1">CPF:</label>
-            <input [(ngModel)]="funcionarioCpf" type="email" class="form-control" id="exampleInputEmail1"
+            <input [(ngModel)]="funcionarioCpf" type="email" class="form-control" mask="000.000.000-00" id="exampleInputEmail1"
               aria-describedby="emailHelp">
           </div>
           <a [routerLink]="['/listar-holerites', funcionarioCpf]" class="btn btn-dark">Consultar</a>
@@ -38,7 +38,7 @@
           <i class="bi bi-upc"></i>
         </span>
       </div>
-      <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="Informe seu CPF">
+      <input [(ngModel)]="funcionarioCpf" mask="000.000.000-00" type="text" class="form-control" placeholder="Informe seu CPF">
     </div>
     <div class="input-group mb-3 col">
       <div class="input-group-prepend">

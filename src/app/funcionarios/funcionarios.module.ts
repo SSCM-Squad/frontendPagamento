@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask'
+
 
 import { FuncionariosService } from './services/funcionarios.service';
 import { ListarComponent } from './components/listar/listar.component';
@@ -28,7 +30,9 @@ import { GerarHoleriteComponent } from './components/gerar-holerite/gerar-holeri
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forChild()
+
   ],
   exports: [
     ListarComponent,

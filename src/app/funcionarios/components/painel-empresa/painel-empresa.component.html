@@ -44,7 +44,8 @@
 
   <div class="d-flex flex-column justify-content-center align-items-center mt-2">
     <div class="input-group mb-3 col-6">
-      <input [(ngModel)]="funcionarioCpf" type="text" class="form-control" placeholder="CPF do Funcionário">
+      <input [(ngModel)]="funcionarioCpf" type="text" mask="000.000.000-00" 
+       class="form-control" placeholder="CPF do Funcionário">
       <div class="input-group-append" >
         <button
           (click)="pesquisarUsuario()"

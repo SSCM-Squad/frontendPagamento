@@ -4,6 +4,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { FuncionariosModule } from './funcionarios/funcionarios.module';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask'
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -20,7 +22,8 @@ import { HoleritesModule } from './holerites/holerites.module';
     HttpClientModule,
     FuncionariosModule,
     FormsModule,
-    HoleritesModule
+    HoleritesModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
