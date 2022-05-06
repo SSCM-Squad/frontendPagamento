@@ -8,7 +8,7 @@
   </nav>
 
   <div class="row d-flex flex-column align-items-center justify-content-center">
-    <h4 class="roboto-h4">Forneça o Identificador do funcionário e a data referente a geração do holerite</h4>
+    <h4 class="roboto-h4">Forneça o Identificador do funcionário e a data referente a geração do holerite no formato ano-mês-dia</h4>
     <div class="row mt-3">
       <div class="input-group mb-3 col">
         <div class="input-group-prepend">
@@ -16,7 +16,7 @@
             <i class="bi bi-upc"></i>
           </span>
         </div>
-        <input [(ngModel)]="identificador" type="text" class="form-control" placeholder="Identificador usuário">
+        <input  mask="00000000" [(ngModel)]="identificador" type="text" class="form-control" placeholder="Identificador usuário">
       </div>
       <div class="input-group mb-3 col">
         <div class="input-group-prepend">
@@ -24,7 +24,7 @@
             <i class="bi bi-calendar-event"></i>
           </span>
         </div>
-        <input [(ngModel)]="data" type="text" class="form-control" placeholder="Data referente">
+        <input mask="0000-00-00" [dropSpecialCharacters]="false" [(ngModel)]="data" type="text" class="form-control" placeholder="2022-05-04">
       </div>
       <div class="col">
         <button (click)="gerarHolerite()" type="button" class="btn btn-warning">Gerar holerite</button>

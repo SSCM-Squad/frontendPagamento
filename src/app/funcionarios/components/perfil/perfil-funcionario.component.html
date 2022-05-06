@@ -11,12 +11,15 @@
 
 <div class="container d-flex justify-content-center align-items-center mt-5">
   <div class="card mb-5">
-    <div class="card-header">
-      <strong>{{funcionario.funcao}}</strong>
+    <div  class="card-header"><i class="bi bi-briefcase-fill"></i>
+      <strong> {{funcionario.funcao}}</strong>
     </div>
     <div class="card-body">
       <h5 class="card-title">Nome: {{funcionario.nome}}</h5>
       <ul class="list-group list-group-flush">
+        <li class="list-group-item"><i class="bi bi-info-circle"></i> 
+          {{funcionario.tipoFuncionario}}
+        </li>
         <li class="list-group-item "><i class="bi bi-currency-dollar"></i> Salário base:
           {{funcionario.salario | currency:'BRL'}}
         </li>
@@ -39,8 +42,8 @@
         <li class="list-group-item"><i class="bi bi-credit-card"></i> Ajuda de custo:
           {{funcionario.ajudaDeCusto | currency:'BRL'}}
         </li>
-        <li class="list-group-item"><i class="bi bi-file-person"></i> CPF:
-          {{funcionario.cpf}}
+        <li class="list-group-item"  ><i class="bi bi-file-person"></i> CPF:
+          {{funcionario.cpf |  mask:"000.000.000-00" }}
         </li>
       </ul>
       <div class="d-flex justify-content-center align-items-center">

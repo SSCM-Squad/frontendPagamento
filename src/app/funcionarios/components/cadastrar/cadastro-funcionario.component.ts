@@ -2,7 +2,7 @@ import { FuncionarioCadastro } from './../../models/funcionario-cadastro';
 import { FuncionariosService } from '../../services/funcionarios.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IFuncionario } from '../../models/IFuncionario';
-import { NgForm } from '@angular/forms';
+
 
 
 

@@ -24,8 +24,8 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Salário</label>
-        <input [(ngModel)]="funcionario.salario" mask="separator.2" thousandSeparator="." name="salario" class="form-control"
-          placeholder="salário base do funcionário" required>
+        <input [(ngModel)]="funcionario.salario" mask="separator.2" thousandSeparator="" separatorLimit="99999" prefix="R$"
+        name="salario" class="form-control" placeholder="salário base do funcionário" required>
       </div>
       <div class="form-group">
         <label for="exampleFormControlSelect1">Quantidade de dependentes</label>
@@ -61,12 +61,12 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Ajuda de custo</label>
-        <input [(ngModel)]="funcionario.ajudaDeCusto"  mask="separator.2" thousandSeparator="."
+        <input [(ngModel)]="funcionario.ajudaDeCusto" mask="separator.2" thousandSeparator="" separatorLimit="999" prefix="R$"
         name="ajudaDeCusto" class="form-control" required>
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Valor do plano de saúde</label>
-        <input [(ngModel)]="funcionario.valorPlanoDeSaude" mask="separator.2" thousandSeparator="."
+        <input [(ngModel)]="funcionario.valorPlanoDeSaude" mask="separator.2" thousandSeparator="" separatorLimit="999" prefix="R$"
          name="valorPlanoDeSaude" class="form-control" required>
       </div>
       <div class="form-group">

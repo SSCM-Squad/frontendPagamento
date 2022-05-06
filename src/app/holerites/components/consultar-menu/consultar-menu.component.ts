@@ -29,6 +29,10 @@ export class ConsultarMenuComponent implements OnInit {
   gerarHolerite(){
     this.holeriteService.consultarHolerite(this.funcionarioCpf, this.data).subscribe((resp: IHolerite)=>{
         this.holeriteGerado = resp
+    }, httpError => {
+      if(httpError.status === 404){
+        alert("Nenhum holerite encontrado")
+      }
     })
   }
 

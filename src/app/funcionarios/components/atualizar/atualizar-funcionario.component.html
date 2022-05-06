@@ -47,7 +47,20 @@
                 Salário
               </span>
             </div>
-            <input [(ngModel)]="funcionario.salario" type="text" class="form-control" placeholder="Salário base">
+            <input [(ngModel)]="funcionario.salario" type="text" class="form-control"
+            mask="separator.2" thousandSeparator="" separatorLimit="99999" prefix="R$" placeholder="Salário base">
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="bi bi-credit-card mr-2"></i>
+                 Ajuda de custo
+              </span>
+            </div>
+            <input [(ngModel)]="funcionario.ajudaDeCusto" type="text" class="form-control"
+            mask="separator.2" thousandSeparator="" separatorLimit="99999" prefix="R$" placeholder="Salário base">
           </div>
         </li>
         <li class="list-group-item">
@@ -80,7 +93,9 @@
                 Valor do plano de saúde
               </span>
             </div>
-            <input [(ngModel)]="funcionario.valorPlanoDeSaude" type="text" class="form-control" placeholder="valor plano de saúde">
+            <input [(ngModel)]="funcionario.valorPlanoDeSaude"
+            mask="separator.2" thousandSeparator="" separatorLimit="999" prefix="R$"
+            type="text" class="form-control" placeholder="valor plano de saúde">
           </div>
         </li>
         <li class="list-group-item">
@@ -113,7 +128,7 @@
                 CPF
               </span>
             </div>
-            <input [(ngModel)]="funcionario.cpf" type="text" class="form-control" placeholder="cpf" >
+            <input mask="000.000.000-00" [(ngModel)]="funcionario.cpf" readonly type="text" class="form-control" placeholder="cpf" >
           </div>
         </li>
       </ul>
