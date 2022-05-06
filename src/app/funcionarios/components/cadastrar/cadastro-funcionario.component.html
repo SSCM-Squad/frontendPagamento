@@ -66,7 +66,7 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Valor do plano de saúde</label>
-        <input [(ngModel)]="funcionario.valorPlanoDeSaude" mask="000,00"
+        <input [(ngModel)]="funcionario.valorPlanoDeSaude" mask="separator.2" thousandSeparator="."
          name="valorPlanoDeSaude" class="form-control" required>
       </div>
       <div class="form-group">
